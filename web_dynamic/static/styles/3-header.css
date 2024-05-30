@@ -4,8 +4,24 @@ header {
     width: 100%;
     border-bottom: 1px solid #CCCCCC;
 }
+
 header .logo {
     background: url("../images/logo.png") no-repeat;
+    background-size: contain; /* Add this line to ensure the logo image fits */
     left: 20px;
     height: 100%;
+}
+
+header #api_status {
+    background-color: #cccccc; /* Initial background color */
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 15px; /* Adjusted to center vertically */
+    right: 20px; /* Adjusted to center horizontally */
+}
+
+header #api_status.available {
+    background-color: #ff545f; /* Change color when status is "OK" */
 }

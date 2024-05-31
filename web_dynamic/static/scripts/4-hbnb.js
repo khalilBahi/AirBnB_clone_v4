@@ -45,4 +45,10 @@ $(document).ready(function () {
             }
         }
     });
+
+    // Fetch places on button click with selected amenities
+    $('button').click(function () {
+        const amenities = Object.keys(selectedAmenities);
+        fetchPlaces({ amenities: amenities });
+    });
 });
